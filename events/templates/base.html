@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static "./css/output.css  " %}">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+</head>
+  <body>
+    {% comment %} Menu bar  {% endcomment %}
+    <header class="flex justify-center">
+      <nav class="bg-[#1f2937] flex justify-between items-center lg:container mx-auto px-12 py-4 shadow-md fixed top-0">
+        <div class="logo">
+            <h3 class="text-3xl font-semibold text-white">
+                <a href="{% url 'home' %}"><span class="text-red-500">Events</span> Management</a>
+            </h3>
+        </div>
+        <div class="relative">
+            <!-- Menu Icon -->
+            <button id="bar-icon" class="lg:hidden block">
+                <i class="fa-solid fa-bars text-red-500 text-xl"></i>
+            </button>
+    
+            <!-- Navigation Links -->
+            <ul id="menu-hidden" class="text-white hidden flex flex-col gap-y-4 lg:flex lg:flex-row lg:gap-x-4 text-lg items-center absolute right-0 lg:static bg-gray-800 lg:bg-transparent px-6 py-4 lg:p-0">
+
+                <li>
+                    <a href="{% url 'home' %}" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Home</a>
+                </li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Events</a>
+                    <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
+                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
+                      <li><a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                  <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Participants</a>
+                  <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
+                    <li><a href="{% url 'participants-list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                  </ul>
+              </li>
+              <li class="relative group">
+                <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Categories</a>
+                <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
+                  <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
+                  <li><a href="{% url 'category-list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                </ul>
+            </li>
+                <li>
+                    <a href="{% url 'dashboard' %}" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Dashboard</a>
+                </li>
+                <li>
+                    <button class="bg-red-500 font-semibold px-3 py-1 rounded-md">Sign out</button>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main >
+      {% block content %}{% endblock content %}
+    </main>
+
+    {% comment %} Footer {% endcomment %}
+    <footer class="bg-[#1f2937] py-20">
+      <div class="text-center text-gray-300 lg:container mx-auto">
+        {% comment %} links {% endcomment %}
+          <ul class="flex flex-wrap justify-center items-center gap-x-4  md:gap-x-14">
+            <li><a href="#" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Events</a></li>
+            <li><a href="#" class="hover:text-white">Participants</a></li>
+            <li><a href="#" class="hover:text-white">Categories</a></li>
+            <li><a href="#" class="hover:text-white">Partners</a></li>
+          </ul>
+        <div class="flex justify-center text-3xl gap-x-8 items-center my-8">
+          <a href="#"><i class="fa-brands fa-github hover:text-white"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook hover:text-white"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter hover:text-white"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram hover:text-white"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube hover:text-white"></i></a>
+        </div>
+        <p >&copy; 2025 Events Management All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="{% static './js/script.js' %}"></script>
+</body>
+</html>

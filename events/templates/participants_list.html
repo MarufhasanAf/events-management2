@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+          {% comment %} Participants {% endcomment %}
+          <section class="lg:container mx-auto py-8 px-12 pt-24 bg-gray-200">
+            <h3 class="text-center text-4xl font-bold py-4 text-gray-800">Participants</span></h3>
+            <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-8 mt-4">
+              <div class="bg-gray-100  px-8 py-8 rounded-lg shadow-2xl">
+                <div class="flex flex-col gap-y-[5px]">
+                  <p><span class="text-md font-medium">ID:</span> 1</p>
+                  <p><span class="text-md font-medium">Name:</span> <span class="text-xl font-semibold">Maruf Hasan</span></p>
+                  <p><span class="text-md font-medium">Email:</span> <span class="text-blue-600">marufhasanaf@gmail.com</span></p>
+                  <p><span class="text-md font-medium">Events:</span> <span class="bg-gray-800 text-white px-2 rounded-sm">Technology</span></p>
+                </div>
+                <div class="flex flex-col items-center text-center mt-4">
+                  <a href="#" class="bg-gray-900 text-white mt-3 py-2 w-full rounded-md shadow-md text-lg font-semibold"><i class="fa-solid fa-pen-to-square text-white text-lg"></i> Edit</a>
+                  <a href="#" class="bg-red-600 text-white mt-3 py-2 w-full rounded-md shadow-md text-lg font-semibold"><i class="fa-solid fa-trash text-white text-lg"> </i> Delete</a>
+                </div>
+              </div>
+              <div class="bg-gray-100  px-8 py-8 rounded-lg shadow-2xl">
+                <div class="flex flex-col gap-y-[5px]">
+                  <p><span class="text-md font-medium">ID:</span> 1</p>
+                  <p><span class="text-md font-medium">Name:</span> <span class="text-xl font-semibold">Maruf Hasan</span></p>
+                  <p><span class="text-md font-medium">Email:</span> <span class="text-blue-600">marufhasanaf@gmail.com</span></p>
+                  <p><span class="text-md font-medium">Events:</span> <span class="bg-gray-800 text-white px-2 rounded-sm">Technology</span></p>
+                </div>
+                <div class="flex flex-col items-center text-center mt-4">
+                  <a href="#" class="bg-gray-900 text-white mt-3 py-2 w-full rounded-md shadow-md text-lg font-semibold"><i class="fa-solid fa-pen-to-square text-white text-lg"></i> Edit</a>
+                  <a href="#" class="bg-red-600 text-white mt-3 py-2 w-full rounded-md shadow-md text-lg font-semibold"><i class="fa-solid fa-trash text-white text-lg"> </i> Delete</a>
+                </div>
+              </div>
+            </div>
+          </section>
+{% endblock content %}

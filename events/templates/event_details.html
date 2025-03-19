@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <section class="lg:container mx-auto px-12 py-8 pt-24 bg-gray-200">
+        <div class="mx-14 my-8 p-10 bg-gray-800 shadow-xl rounded-xl flex flex-col md:flex-row gap-8">
+            <div class="w-1/2">
+                <img src="{% static 'img/event-details.jpg' %}" alt="" class=" rounded-xl shadow-lg">
+            </div>
+            <div class="w-1/2">
+                <p class = "text-lg text-gray-300">Event Name</p>
+                <p class="text-3xl text-red-500 font-bold">Technology</p>
+                <div class="flex flex-col gap-6 mt-8">
+                    <div class="flex justify-start items-center gap-4">
+                        <div><i class="fa-solid fa-calendar-days text-red-500 text-2xl"></i></div>
+                        <div>
+                            <p class="text-gray-400">Event Date & Time</p>
+                            <p class="text-gray-200 text-lg">March 10, 2025 at 5:45 PM</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center gap-4">
+                        <div><i class="fa-solid fa-location-dot text-red-500 text-2xl"></i></div>
+                        <div>
+                            <p class="text-gray-400">Event Location</p>
+                            <p class="text-gray-200 text-lg">KISHOREGANJ</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center gap-4">
+                        <div><i class="fa-solid fa-tags text-red-500 text-2xl"></i></div>
+                        <div>
+                            <p class="text-gray-400">Event Category</p>
+                            <p class="text-gray-200 text-lg">On render test</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center gap-4">
+                        <div><i class="fa-solid fa-users text-red-500 text-2xl"></i></div>
+                        <div>
+                            <p class="text-gray-400">Participants</p>
+                            <p class="text-gray-200 text-lg">1 Registerd</p>
+                        </div>
+                    </div>
+                    <div class=" p-6 bg-gray-700 rounded-lg">
+                        <div class="flex justify-start items-center gap-2">
+                            <div><i class="fa-solid fa-file-lines text-red-500 text-lg"></i></div>
+                            <div>
+                            <p class="text-gray-200 text-lg ">Event Description</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 py-2">Dummy Description</p>
+                    </div>
+                    <div class="flex items-center gap-6 text-center text-white text-lg">
+                        <a href="#" class="bg-red-500 py-2 w-1/2 rounded-md"><i class="fa-solid fa-plus"></i> Create More Event</a>
+                        <a href="#" class="bg-gray-500 py-2 w-1/2 rounded-md"><i class="fa-solid fa-pen-to-square"></i> Edit Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
