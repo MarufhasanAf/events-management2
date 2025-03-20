@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %} Error {% endblock title %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-900">
+  <div class="text-center">
+    <h1 class="text-6xl font-bold text-red-600 mb-4">Oops!</h1>
+    <p class="text-xl text-gray-300 mb-8">Something went wrong!. Please try again later.</p>
+    <a href="{% url 'home' %}" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300">
+      Go Back Home
+    </a>
+  </div>
+</div>
+{% endblock content %}

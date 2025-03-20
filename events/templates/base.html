@@ -12,7 +12,7 @@
   <body>
     {% comment %} Menu bar  {% endcomment %}
     <header class="flex justify-center">
-      <nav class="bg-[#1f2937] flex justify-between items-center lg:container mx-auto px-12 py-4 shadow-md fixed top-0">
+      <nav class="bg-[#1f2937] flex justify-between w-full items-center lg:container mx-auto px-12 py-4 shadow-md fixed top-0">
         <div class="logo">
             <h3 class="text-3xl font-semibold text-white">
                 <a href="{% url 'home' %}"><span class="text-red-500">Events</span> Management</a>
@@ -33,22 +33,21 @@
                 <li class="relative group">
                     <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Events</a>
                     <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
-                      <li><a href="{% url 'home' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                      <li><a href="{% url 'event_create' %}" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
                     </ul>
                 </li>
                 <li class="relative group">
                   <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Participants</a>
                   <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
-                    <li><a href="{% url 'participants-list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                    <li><a href="{% url 'participant_create' %}" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
+                    <li><a href="{% url 'participant_list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
                   </ul>
               </li>
               <li class="relative group">
                 <a href="#" class="hover:text-gray-300 hover:duration-150 focus:bg-gray-950 px-3 py-1 rounded-md">Categories</a>
                 <ul class="absolute left-0 mt-1 hidden bg-gray-700 text-white py-2 rounded-md w-32 group-hover:block">
-                  <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
-                  <li><a href="{% url 'category-list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
+                  <li><a href="{% url 'category_create' %}" class="block px-4 py-2 hover:bg-red-500">Create</a></li>
+                  <li><a href="{% url 'category_list' %}" class="block px-4 py-2 hover:bg-red-500">List</a></li>
                 </ul>
             </li>
                 <li>
